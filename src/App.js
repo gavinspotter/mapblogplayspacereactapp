@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import MainNavigation from "./shared/navigation/MainNavigation";
+import Blog from "./blog/pages/Blog";
 
 function App() {
   return (
@@ -15,7 +16,9 @@ function App() {
       <main>
         <Switch>
           <Route path="/" exact></Route>
-          <Route path="/:userId/blog" exact></Route>
+          <Route path="/:userId/blog" exact>
+            <Blog />
+          </Route>
           <Route path="/blog/new" exact></Route>
           <Redirect to="/" />
         </Switch>
