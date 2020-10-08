@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import MainNavigation from "./shared/navigation/MainNavigation";
 import Blog from "./blog/pages/Blog";
+import NewBlog from "./blog/pages/NewBlog";
 
 function App() {
   return (
@@ -19,7 +20,9 @@ function App() {
           <Route path="/:userId/blog" exact>
             <Blog />
           </Route>
-          <Route path="/blog/new" exact></Route>
+          <Route path="/blog/new" exact>
+            <NewBlog />
+          </Route>
           <Redirect to="/" />
         </Switch>
       </main>
