@@ -16,12 +16,12 @@ const Input = (props) => {
 
   const element2 =
     props.element === "editinput" ? (
-      <input name={props.nam1} value={props.val1} ref={props.valRef} />
+      <input name={props.nam1} defaultValue={props.val1} ref={props.valRef} />
     ) : (
       <textarea
         rows={props.rows || 3}
         name={props.nam1}
-        value={props.val1}
+        defaultValue={props.val1}
         ref={props.valRef}
       />
     );

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import Card from "../../shared/UIElements/Card";
 import Input from "../../shared/FormComponents/Input";
 import Button from "../../shared/FormComponents/Button";
@@ -30,20 +31,26 @@ const BLOG = [
 const UpdateBlog = (props) => {
   const blogId = useParams().blogId;
   const indentifiedBlog = BLOG.find((b) => b.id === blogId);
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+  };
 
   return (
     <Card>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Input
           valueDue="editinput"
           element="editinput"
-          name="hi"
+          nam1="hi"
           val1={indentifiedBlog.blgentry}
+          valRef={register}
         />
         <Input
           valueDue="editinput"
-          name="hello"
+          nam1="hello"
           val1={indentifiedBlog.blgimg}
+          valRef={register}
         />
         <Button>update blog</Button>
       </form>
