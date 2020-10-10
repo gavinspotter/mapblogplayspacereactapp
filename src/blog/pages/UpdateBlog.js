@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const BLOG = [
   {
@@ -23,6 +24,9 @@ const BLOG = [
   },
 ];
 
-const UpdateBlog = () => {};
+const UpdateBlog = (props) => {
+  const blogId = useParams().blogId;
+  const indentifiedBlog = BLOG.find((b) => b.id === blogId);
+};
 
 export default UpdateBlog;
