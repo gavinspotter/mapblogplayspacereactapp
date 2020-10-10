@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../shared/UIElements/Card";
 import Input from "../../shared/FormComponents/Input";
+import Button from "../../shared/FormComponents/Button";
 
 const NewBlog = () => {
   return (
@@ -8,6 +9,8 @@ const NewBlog = () => {
       <form>
         <Input element="input" />
         <Input />
+        <Button>edit</Button>
+        <Button>delete</Button>
       </form>
     </Card>
   );
