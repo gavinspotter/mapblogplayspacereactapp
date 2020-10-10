@@ -9,8 +9,7 @@ const NewBlog = (props) => {
       <form>
         <Input element="input" />
         <Input />
-        <Button to={`/blog/${props.id}`}>edit</Button>
-        <Button>delete</Button>
+        <Button>add place</Button>
       </form>
     </Card>
   );

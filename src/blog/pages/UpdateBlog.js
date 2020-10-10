@@ -1,5 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import Card from "../../shared/UIElements/Card";
+import Input from "../../shared/FormComponents/Input";
+import Button from "../../shared/FormComponents/Button";
 
 const BLOG = [
   {
@@ -27,6 +30,25 @@ const BLOG = [
 const UpdateBlog = (props) => {
   const blogId = useParams().blogId;
   const indentifiedBlog = BLOG.find((b) => b.id === blogId);
+
+  return (
+    <Card>
+      <form>
+        <Input
+          valueDue="editinput"
+          element="editinput"
+          name="hi"
+          val1={indentifiedBlog.blgentry}
+        />
+        <Input
+          valueDue="editinput"
+          name="hello"
+          val1={indentifiedBlog.blgimg}
+        />
+        <Button>update blog</Button>
+      </form>
+    </Card>
+  );
 };
 
 export default UpdateBlog;
